@@ -24,6 +24,6 @@ jobs:
       run: | 
         aws s3 ls
         aws sts  get-caller-identity
-        aws iam list-attached-role-policies --role-name github-s3-role
+
 
 
