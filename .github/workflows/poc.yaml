@@ -15,7 +15,7 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-region: us-east-1
-        role-to-ressume: ${{ secrets.DEV_ARN_ROLE }}
+        role-to-assume: ${{ secrets.DEV_ARN_ROLE }}
         role-session-name: OIDCSession
     - name: "List S3"
       run: aws s3 ls
