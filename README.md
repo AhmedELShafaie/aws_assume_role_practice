@@ -14,7 +14,7 @@
             * Add permissions(Policies) 
             * Set Role name,Description
             * In the Select trusted entities it will show 
-````sh
+````json
 {
 "Version": "2012-10-17",
 "Statement": [
