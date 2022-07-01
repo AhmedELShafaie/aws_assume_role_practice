@@ -1,7 +1,7 @@
 # aws_assume_role_practice
 
 
-## This repo aim to test Github action with AWS AssumeRole 
+## This repo aim to test Github action with AWS AssumeRole :joy:
 
     1. Create identity provider
         . Choose OpenID Connect
