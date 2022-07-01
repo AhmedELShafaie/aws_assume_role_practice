@@ -2,7 +2,7 @@ name: "assume role poc"
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   list_s3_buckets:
    name: "list s3 buckets"
@@ -20,4 +20,3 @@ jobs:
     - name: "List S3"
       run: aws s3 ls
 
-      
