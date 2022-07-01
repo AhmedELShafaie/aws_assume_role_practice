@@ -16,6 +16,7 @@ jobs:
       with:
         role-to-assume: ${{ secrets.DEV_ARN_ROLE }}
         role-session-name: OIDCSession
+        aws-region: us-east-1
     - name: "List S3"
       run: aws s3 ls
 
