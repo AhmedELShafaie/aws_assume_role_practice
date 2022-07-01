@@ -12,7 +12,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     - name: Configure AWS Credentials
-      uses: aws-actions/confifure-aws-credentials@v1
+      uses: aws-actions/configure-aws-credentials@v1
       with:
         region: "us-east-1"
         role_arn: "${{ secrets.DEV_ARN_ROLE }}"
