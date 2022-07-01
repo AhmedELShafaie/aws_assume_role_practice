@@ -26,6 +26,9 @@
         },
         "Condition": {
             "StringEquals": {
+                "token.actions.githubusercontent.com:sub" [
+                    "repo:ahmedelshafaie/aws_assume_role_practice:ref:refs/heads/main"
+                ],  
                 "token.actions.githubusercontent.com:aud": [
                     "sts.amazonaws.com"
                 ]
@@ -35,3 +38,12 @@
 ]
 }
 ````
+
+We need to add to which Github actions we need to authorize this role.
+This is made by adding provider_identity in this case "token.actions.githubusercontent.com" with ":sub"
+token.actions.githubusercontent.com:sub [
+    repo:GITHUB_USER||GITHUB_ORG/REPOSITORY_NAME:pull_request" ,
+    repo:GITHUB_USER||GITHUB_ORG/REPOSITORY_NAME:ref:refs/head/branch_name     ###This is for push request to branch
+]
+
+

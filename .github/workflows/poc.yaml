@@ -1,0 +1,23 @@
+name: "assume role poc"
+on:
+  push:
+    branches:
+      - master
+jobs:
+  list_s3_buckets:
+   name: "list s3 buckets"
+   runs-on: ubuntu-latest
+   environment: development
+   steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Configure AWS Credentials
+      uses: aws-actions/confifure-aws-credentials@v1
+      with:
+        region: "us-east-1"
+        role_arn: "${{ secrets.DEV_ARN_ROLE }}"
+        role-session-name: OIDCSession
+    - name: "List S3"
+      run: aws s3 ls
+
+      
